@@ -8,12 +8,12 @@ export function About() {
                 <div className="col-span-2">
                     <p className="uppercase text-xl tracking-widest text-[#1F6FEB]">About</p>
                     <p className="py-4">Who I Am</p>
-                    <p className="py-2 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione quod
+                    <p className="py-2 text-gray-600 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione quod
                         blanditiis qui est molestias aspernatur eos,
                         esse temporibus iste quae dolorem ut fugiat rerum quia neque facere
                         asperiores consequatur! Quidem?
                     </p>
-                    <p className="py-2 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione quod
+                    <p className="py-2 text-gray-600 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione quod
                         blanditiis qui est molestias aspernatur eos,
                         esse temporibus iste quae dolorem ut fugiat rerum quia neque facere
                         asperiores consequatur! Quidem?
