@@ -11,7 +11,7 @@ export function Projects() {
                 <p className="text-xl tracking-widest uppercase text-[#1F6FEB]">Projects</p>
                 <h2 className="py-4">What I've Build</h2>
 
-                <div className="gird md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
 
                     <div className="
                         relative flex items-center justify-center h-auto w-full 
@@ -22,10 +22,10 @@ export function Projects() {
                     >
                         <Image className="rounded-xl group-hover:opacity-10" src={DevlandiaImage} alt="/" />
                         <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                            <h3>Devlândia</h3>
-                            <p>React Native</p>
+                            <h3 className="text-xl text-white tracking-wider text-center">Devlândia</h3>
+                            <p className="pb-4 pt-2 text-white text-center">React Native</p>
                             <Link href="/">
-                                <p>More Info</p>
+                                <p className="text-center py-3 px-3 rounded-lg bg-white text-gray-700 font-bold text-xl cursor-pointer">More Info</p>
                             </Link>
                         </div>
                     </div>
