@@ -8,8 +8,7 @@ export function ProjectItem({ name, description, image }) {
         relative flex items-center justify-center h-auto w-full 
         shadow-xl shadow-gray-400 rounded-xl p-4 group 
         hover:bg-gradient-to-r
-        from-[#425675]
-        to-[#1F6FEB]"
+        from-gray-400 to-gray-700"
         >
             <Image className="rounded-xl group-hover:opacity-10" src={image} alt="/" />
             <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
