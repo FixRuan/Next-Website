@@ -5,8 +5,14 @@ import GoFinancesImage from '../public/assets/projects/gofinances.png';
 import PokedexImage from '../public/assets/projects/pokedex.png';
 import IgnewsImage from '../public/assets/projects/ignews.png';
 
+interface Project {
+    name: string;
+    description: string;
+    image: any;
+    projectUrl: string;
+};
 
-const projectsArray = [
+const projectsArray: Project[] = [
     {
         name: 'Devlândia',
         description: 'React Native',
