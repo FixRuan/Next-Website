@@ -5,7 +5,7 @@ import { projectsArray } from "../utils/projects";
 
 export function Projects() {
     return (
-        <div className="w-full">
+        <div id="projects" className="w-full">
             <div className="max-w-[1240px] mx-auto px-2 py-16">
                 <p className="text-xl tracking-widest uppercase text-[#1F6FEB]">Projects</p>
                 <h2 className="py-4">What I've Build</h2>

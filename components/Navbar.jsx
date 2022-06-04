@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
@@ -10,30 +10,45 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 export function Navbar() {
 
     const [nav, setNav] = useState(false);
+    const [shadow, setShadow] = useState(false);
 
     function handleNav() {
         setNav(!nav);
     }
 
+    useEffect(() => {
+        function handleShadow() {
+            if (window.scrollY >= 90) {
+                setShadow(true);
+            } else {
+                setShadow(false);
+            }
+        }
+
+        window.addEventListener('scroll', handleShadow);
+    }, []);
+
     return (
-        <div className='fixed w-full h-20 shadow-xl z-[100] bg-white px-4'>
+        <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100] px-4 bg-white' : 'fixed w-full h-20 z-[100]  px-4'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-                <Image src="/../public/assets/_rp.png" alt="logo" width="106px" height="54px" />
+                <Link href="/#home">
+                    <Image className='cursor-pointer' src="/../public/assets/_rp.png" alt="logo" width="106px" height="54px" />
+                </Link>
                 <div>
                     <ul className='hidden md:flex'>
                         <Link href="/">
                             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#about">
                             <li className="ml-10 text-sm uppercase hover:border-b">About</li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#skills">
                             <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#projects">
                             <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#contact">
                             <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
                         </Link>
                     </ul>
@@ -63,23 +78,23 @@ export function Navbar() {
 
                     <div className="py-4 flex flex-col">
                         <ul className="uppercase">
-                            <Link href="/">
+                            <Link href="/#home">
                                 <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Home</li>
                             </Link>
 
-                            <Link href="/">
+                            <Link href="/#about">
                                 <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">About</li>
                             </Link>
 
-                            <Link href="/">
+                            <Link href="/#skills">
                                 <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Skills</li>
                             </Link>
 
-                            <Link href="/">
+                            <Link href="/#projects">
                                 <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Projects</li>
                             </Link>
 
-                            <Link href="/">
+                            <Link href="/#contact">
                                 <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Contact</li>
                             </Link>
                         </ul>
