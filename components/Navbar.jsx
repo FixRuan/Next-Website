@@ -16,6 +16,10 @@ export function Navbar() {
         setNav(!nav);
     }
 
+    function closeNav() {
+        setNav(false);
+    }
+
     useEffect(() => {
         function handleShadow() {
             if (window.scrollY >= 90) {
@@ -65,7 +69,16 @@ export function Navbar() {
                 }>
                     <div>
                         <div className="flex w-full items-center justify-between">
-                            <Image src="/../public/assets/_rp.png" alt="logo" width="106px" height="54px" />
+                            <Link href="/">
+                                <Image
+                                    className='cursor-pointer'
+                                    src="/../public/assets/_rp.png"
+                                    alt="logo"
+                                    width="106px"
+                                    height="54px"
+                                />
+                            </Link>
+
                             <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
                                 <AiOutlineClose />
                             </div>
@@ -79,23 +92,23 @@ export function Navbar() {
                     <div className="py-4 flex flex-col">
                         <ul className="uppercase">
                             <Link href="/#home">
-                                <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Home</li>
+                                <li onClick={closeNav} className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Home</li>
                             </Link>
 
                             <Link href="/#about">
-                                <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">About</li>
+                                <li onClick={closeNav} className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">About</li>
                             </Link>
 
                             <Link href="/#skills">
-                                <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Skills</li>
+                                <li onClick={closeNav} className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Skills</li>
                             </Link>
 
                             <Link href="/#projects">
-                                <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Projects</li>
+                                <li onClick={closeNav} className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Projects</li>
                             </Link>
 
                             <Link href="/#contact">
-                                <li className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Contact</li>
+                                <li onClick={closeNav} className="py-4 text-sm hover:text-[#1F6FEB] ease-in duration-200">Contact</li>
                             </Link>
                         </ul>
 
@@ -107,7 +120,9 @@ export function Navbar() {
                                 </div>
 
                                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                    <FaGithub />
+                                    <Link href="https://github.com/FixRuan">
+                                        <FaGithub />
+                                    </Link>
                                 </div>
 
                                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
