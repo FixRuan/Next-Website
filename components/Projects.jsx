@@ -17,6 +17,7 @@ export function Projects() {
                             description={project.description}
                             image={project.image}
                             key={project.name}
+                            projectUrl={project.projectUrl}
                         />
                     )}
 
