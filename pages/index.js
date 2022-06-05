@@ -16,7 +16,7 @@ export default function Home() {
                 <link rel="icon" href="/assets/rp.svg" />
             </Head>
 
-            <Navbar />
+
             <Main />
             <About />
             <Skills />
