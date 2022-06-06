@@ -17,37 +17,37 @@ const projectsArray: Project[] = [
         name: 'Devlândia',
         description: 'React Native',
         image: DevlandiaImage,
-        projectUrl: '/property',
+        projectUrl: '/devlandia',
     },
     {
         name: 'Go Pizza',
         description: 'React Native',
         image: GoPizzaImage,
-        projectUrl: '/property',
+        projectUrl: '/devlandia',
     },
     {
         name: 'RentX',
         description: 'React Native',
         image: RentxImage,
-        projectUrl: '/property',
+        projectUrl: '/devlandia',
     },
     {
         name: 'Go Finances',
         description: 'React Native',
         image: GoFinancesImage,
-        projectUrl: '/property',
+        projectUrl: '/devlandia',
     },
     {
         name: 'Pokedex',
         description: 'React Native',
         image: PokedexImage,
-        projectUrl: '/property',
+        projectUrl: '/devlandia',
     },
     {
         name: 'IGnews',
         description: 'React Js',
         image: IgnewsImage,
-        projectUrl: '/property',
+        projectUrl: '/devlandia',
     },
 ];
 
