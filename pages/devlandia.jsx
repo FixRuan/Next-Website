@@ -1,6 +1,7 @@
 import Image from "next/image";
 import propertyImg from '../public/assets/projects/devlandia.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
+import Link from "next/link";
 
 
 export default function Devlandia() {
@@ -43,7 +44,7 @@ export default function Devlandia() {
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
 
-                        <div className="">
+                        <div className="grid grid-cols-3 md:grid-cols-1">
                             <p className="flex text-gray-600 py-2 items-center">
                                 <RiRadioButtonFill className="pr-1" /> React Native
                             </p>
@@ -66,8 +67,12 @@ export default function Devlandia() {
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <Link href="/#projects">
+                    <p className="underline cursor-pointer">Back</p>
+                </Link>
+
+            </div>
         </div>
     )
 }
