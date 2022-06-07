@@ -21,20 +21,11 @@ export default function Devlandia() {
             <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
                 <div className="col-span-4">
                     <p>Project</p>
-                    <h2>Overview</h2>
+                    <h2 className="py-4">Overview</h2>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Totam culpa nostrum dolore excepturi nam, sunt temporibus
-                        hic molestiae corrupti! Mollitia molestias laborum perspiciatis
-                        corrupti dicta quia quisquam quasi ad quaerat.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Totam culpa nostrum dolore excepturi nam, sunt temporibus
-                        hic molestiae corrupti! Mollitia molestias laborum perspiciatis
-                        corrupti dicta quia quisquam quasi ad quaerat.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Totam culpa nostrum dolore excepturi nam, sunt temporibus
-                        hic molestiae corrupti! Mollitia molestias laborum perspiciatis
-                        corrupti dicta quia quisquam quasi ad quaerat.
+                        💙 Aplicativo gratuito para aprender programação.A proposta do aplicativo é
+                        auxiliar no ensino básico de programação utilizando de conceitos de gamificação
+                        para uma formação inicial de um cidadão nessa área.
                     </p>
 
                     <button className="px-8 py-2 mt-4">Code</button>
