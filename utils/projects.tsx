@@ -29,7 +29,7 @@ const projectsArray: Project[] = [
         name: 'RentX',
         description: 'React Native',
         image: RentxImage,
-        projectUrl: '/devlandia',
+        projectUrl: '/rentx',
     },
     {
         name: 'Go Finances',

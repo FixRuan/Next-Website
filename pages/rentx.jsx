@@ -1,19 +1,19 @@
 import Image from "next/image";
-import DevlandiaImage from '../public/assets/projects/devlandia.png';
+import RentXImage from '../public/assets/projects/rentx.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from "next/link";
 
 
-export default function Devlandia() {
+export default function Rentx() {
 
     return (
         <div className="w-full">
             <div className="w-screen h-[30vh] lg:h-[40vh] relative">
                 <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-100">
-                    <Image className="absolute z-[-10]" layout="fill" objectFit="cover" src={DevlandiaImage} alt="/" />
+                    <Image className="absolute z-[-10]" layout="fill" objectFit="cover" src={RentXImage} alt="/" />
                     <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-                        <h2 className="py-2">Devlandia</h2>
-                        <h3>React Native / NodeJs</h3>
+                        <h2 className="py-2">RentX</h2>
+                        <h3>React Native</h3>
                     </div>
                 </div>
             </div>
@@ -23,12 +23,11 @@ export default function Devlandia() {
                     <p>Project</p>
                     <h2 className="py-4">Overview</h2>
                     <p>
-                        💙 Aplicativo gratuito para aprender programação.A proposta do aplicativo é
-                        auxiliar no ensino básico de programação utilizando de conceitos de gamificação
-                        para uma formação inicial de um cidadão nessa área.
+                        🖤 Aplicativo para aluguel de carros utilizando react native e consumindo api com Axios.
+                        Funcionalidades de escolher o carro, quantidade de dias para o aluguel e a data a ser utilizado.
                     </p>
 
-                    <Link href="https://github.com/404jv/dev-landia">
+                    <Link href="https://github.com/fixRuan/rentx">
                         <button className="px-8 py-2 mt-4">Code</button>
                     </Link>
 
@@ -44,20 +43,9 @@ export default function Devlandia() {
                             </p>
 
                             <p className="flex text-gray-600 py-2 items-center">
-                                <RiRadioButtonFill className="pr-1" /> Node Js
-                            </p>
-
-                            <p className="flex text-gray-600 py-2 items-center">
                                 <RiRadioButtonFill className="pr-1" /> Typescript
                             </p>
 
-                            <p className="flex text-gray-600 py-2 items-center">
-                                <RiRadioButtonFill className="pr-1" /> PostgreSQL
-                            </p>
-
-                            <p className="flex text-gray-600 py-2 items-center">
-                                <RiRadioButtonFill className="pr-1" /> TypeORM
-                            </p>
                         </div>
                     </div>
                 </div>
