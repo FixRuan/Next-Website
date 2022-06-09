@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
@@ -8,9 +9,12 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 
 export function Navbar() {
+    const router = useRouter();
 
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
+    const [navBg, setNavBg] = useState();
+    const [linkColor, setLinkColor] = useState()
 
     function handleNav() {
         setNav(!nav);
@@ -19,6 +23,23 @@ export function Navbar() {
     function closeNav() {
         setNav(false);
     }
+
+    useEffect(() => {
+        if (
+            router.asPath == '/devlandia' ||
+            router.asPath == '/gofinances' ||
+            router.asPath == '/gopizza' ||
+            router.asPath == '/ignews' ||
+            router.asPath == '/pokedex' ||
+            router.asPath == '/rentx'
+        ) {
+            setNavBg('transparent');
+            setLinkColor('#ecf0f3');
+        } else {
+            setNavBg('#ecf0f3');
+            setLinkColor('#1f2937');
+        }
+    }, [router]);
 
     useEffect(() => {
         function handleShadow() {
@@ -33,13 +54,18 @@ export function Navbar() {
     }, []);
 
     return (
-        <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100] px-4 bg-white' : 'fixed w-full h-20 z-[100]  px-4'}>
+        <div
+            style={{ backgroundColor: `${navBg}` }}
+            className={shadow ? 'fixed w-full h-20 shadow-xl z-[100] px-4' : 'fixed w-full h-20 z-[100]  px-4'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <Link href="/#home">
                     <Image className='cursor-pointer' src="/../public/assets/_rp.png" alt="logo" width="106px" height="54px" />
                 </Link>
                 <div>
-                    <ul className='hidden md:flex'>
+                    <ul
+                        style={{ color: `${linkColor}` }}
+                        className='hidden md:flex'
+                    >
                         <Link href="/">
                             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
                         </Link>
